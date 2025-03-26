@@ -1,9 +1,10 @@
 from flask import Flask,request, jsonify
+from flask_cors import CORS
 # importamos a classe FLask do modulo flask para criar nosso aplicativo web
 
 # O parâmetro __name__ é passado para o Flask para que ele consiga identificar o arquivo principal da aplicação
 app = Flask(__name__)
-
+CORS(app)
 import sqlite3
 
 # Aqui estamos criando uma rota para o endpoint "/pagar"
